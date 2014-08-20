@@ -82,8 +82,8 @@ function frameCallback() {
   var state = vrSensor.getState();
   var cssOrientationMatrix = cssMatrixFromOrientation(state.orientation, true);
 
-  //cssCamera.style.transform = cssOrientationMatrix + " " + cssCameraPositionTransform;
   cssCamera.style.transform = cssOrientationMatrix + " " + cssCameraPositionTransform;
+
 }
 
 function vrDeviceCallback(vrdevs) {
