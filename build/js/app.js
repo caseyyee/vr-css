@@ -68,6 +68,7 @@ var cssCamera;
 // is not oriented how I expected it to be oriented
 var cssCameraPositionTransform = "translate3d(0, 0, 0) rotateZ(180deg) rotateY(180deg)";
 
+
 function frameCallback() {
   // This is needed to update the CSS orientation/position from the HMD's orientation/position.
   // In the future, we may have CSS transform function to do this automatically -- for example:
@@ -81,7 +82,8 @@ function frameCallback() {
   var state = vrSensor.getState();
   var cssOrientationMatrix = cssMatrixFromOrientation(state.orientation, true);
 
-  cssCamera.style.transform =  cssCameraPositionTransform;
+  //cssCamera.style.transform = cssOrientationMatrix + " " + cssCameraPositionTransform;
+  cssCamera.style.transform = cssOrientationMatrix + " " + cssCameraPositionTransform;
 }
 
 function vrDeviceCallback(vrdevs) {

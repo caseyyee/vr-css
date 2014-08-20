@@ -5,8 +5,8 @@ block content
 		h1 Storyboard
 
 		#container.container
-			#camera.threed(style='transform: matrix3d(0.502857, -0.864346, -0.00641062, 0, 0.0135028, 0.000439544, 0.999909, 0, -0.864264, -0.502897, 0.0118921, 0, 0, 0, 0, 1) translate3d(0px, 0px, 0px) rotateZ(180deg) rotateY(180deg);')
-				iframe#panel.threed.pane(width='1280', height='720', src='//www.youtube.com/embed/LJSFlMCTXE8?rel=0&autoplay=1', frameborder='0', allowfullscreen)
+			#camera.threed(style='transform:  translate3d(0px, -150px, 0px) rotateZ(180deg) rotateY(180deg)')
+				iframe#pane1.threed.pane(width='1280', height='720', src='//www.youtube.com/embed/LJSFlMCTXE8?rel=0&autoplay=1', frameborder='0', allowfullscreen)
 				- i = 8
 				- while(i > 0)
 						div(class='threed pane seats row#{ i }')
